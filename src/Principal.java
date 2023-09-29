@@ -6,15 +6,15 @@ import java.text.DecimalFormat;
 public class Principal {
     public static void main(String[] args) {
         Filme rambo1 = new Filme();
-        rambo1.nome = "Rambo: First Blood";
-        rambo1.direcao = "Ted Kotcheff";
-        rambo1.incluidoNoPlano = true;
-        rambo1.anoDeLancamento = 1982;
-        rambo1.duracaoEmMinutos = 97;
-        rambo1.genero.add("ação");
+        rambo1.setNome("Rambo: First Blood");
+        rambo1.setDirecao("Ted Kotcheff");
+        rambo1.setIncluidoNoPlano(true);
+        rambo1.setAnoDeLancamento(1982);
+        rambo1.setDuracaoEmMinutos(97);
         rambo1.exibeFichaTecnica();
         rambo1.avalia(8);
         rambo1.avalia(9);
+        rambo1.avalia(7);
         System.out.println(arredondar(rambo1.pegaMedia()));
         System.out.println("Número de avaliações: " + rambo1.getTotalDeAvaliacoes());
     }

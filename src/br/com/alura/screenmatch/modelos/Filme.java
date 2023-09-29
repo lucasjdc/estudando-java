@@ -3,20 +3,39 @@ package br.com.alura.screenmatch.modelos;
 import java.util.ArrayList;
 
 public class Filme {
-    public String nome;
-    public ArrayList<String > genero  = new ArrayList<String>();
-    public String direcao;
-    public int anoDeLancamento;
-    public boolean incluidoNoPlano;
+    private String nome;
+    private ArrayList<String > genero  = new ArrayList<String>();
+    private String direcao;
+    private int anoDeLancamento;
+    private boolean incluidoNoPlano;
     private double somaDasAvaliacoes;
     private int totalDeAvaliacoes;
-    double mediaDasAvaliacoes;
-    public int duracaoEmMinutos;
+    private double mediaDasAvaliacoes;
+    private int duracaoEmMinutos;
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setDirecao(String direcao) {
+        this.direcao = direcao;
+    }
+
+    public void setAnoDeLancamento(int anoDeLancamento) {
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
+    public void setIncluidoNoPlano(boolean incluidoNoPlano) {
+        this.incluidoNoPlano = incluidoNoPlano;
+    }
+
+    public void setDuracaoEmMinutos(int duracaoEmMinutos) {
+        this.duracaoEmMinutos = duracaoEmMinutos;
+    }
 
     public void  exibeFichaTecnica(){
         System.out.println("Nome: " + nome);
         System.out.println("Ano de lançamento: " + anoDeLancamento);
-        System.out.println("Gênero: " + genero);
     }
 
     public void avalia(double nota){
