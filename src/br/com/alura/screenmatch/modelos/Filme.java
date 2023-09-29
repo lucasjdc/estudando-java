@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class Filme {
     private String nome;
-    private ArrayList<String > genero  = new ArrayList<String>();
     private String direcao;
     private int anoDeLancamento;
     private boolean incluidoNoPlano;
