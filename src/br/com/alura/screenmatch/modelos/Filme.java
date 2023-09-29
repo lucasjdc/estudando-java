@@ -1,33 +1,35 @@
+package br.com.alura.screenmatch.modelos;
+
 import java.util.ArrayList;
 
 public class Filme {
-    String nome;
-    ArrayList<String > genero  = new ArrayList<String>();
-    String direcao;
-    int anoDeLancamento;
-    boolean incluidoNoPlano;
+    public String nome;
+    public ArrayList<String > genero  = new ArrayList<String>();
+    public String direcao;
+    public int anoDeLancamento;
+    public boolean incluidoNoPlano;
     private double somaDasAvaliacoes;
     private int totalDeAvaliacoes;
     double mediaDasAvaliacoes;
-    int duracaoEmMinutos;
+    public int duracaoEmMinutos;
 
-    void  exibeFichaTecnica(){
+    public void  exibeFichaTecnica(){
         System.out.println("Nome: " + nome);
         System.out.println("Ano de lançamento: " + anoDeLancamento);
         System.out.println("Gênero: " + genero);
     }
 
-    void avalia(double nota){
+    public void avalia(double nota){
         somaDasAvaliacoes += nota;
         totalDeAvaliacoes++;
     }
 
-    double pegaMedia(){
+    public double pegaMedia(){
         mediaDasAvaliacoes = somaDasAvaliacoes / totalDeAvaliacoes;
         return Math.round(mediaDasAvaliacoes);
     }
 
-    int getTotalDeAvaliacoes() {
+    public int getTotalDeAvaliacoes() {
         return totalDeAvaliacoes;
     }
 }

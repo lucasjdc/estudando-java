@@ -1,3 +1,5 @@
+import br.com.alura.screenmatch.modelos.Filme;
+
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 
