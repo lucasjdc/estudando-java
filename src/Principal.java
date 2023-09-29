@@ -14,7 +14,6 @@ public class Principal {
         rambo1.exibeFichaTecnica();
         rambo1.avalia(8);
         rambo1.avalia(9);
-        rambo1.avalia(7);
         System.out.println(arredondar(rambo1.pegaMedia()));
         System.out.println("Número de avaliações: " + rambo1.getTotalDeAvaliacoes());
     }
