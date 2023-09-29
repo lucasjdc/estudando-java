@@ -26,7 +26,8 @@ public class Filme {
         mediaDasAvaliacoes = somaDasAvaliacoes / totalDeAvaliacoes;
         return Math.round(mediaDasAvaliacoes);
     }
-    int pegaTotalDeAvaliacoes(){
+
+    int getTotalDeAvaliacoes() {
         return totalDeAvaliacoes;
     }
 }

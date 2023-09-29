@@ -14,7 +14,7 @@ public class Principal {
         rambo1.avalia(8);
         rambo1.avalia(9);
         System.out.println(arredondar(rambo1.pegaMedia()));
-        System.out.println("Número de avaliações: " + rambo1.pegaTotalDeAvaliacoes());
+        System.out.println("Número de avaliações: " + rambo1.getTotalDeAvaliacoes());
     }
 
     private static String arredondar(double media) {
