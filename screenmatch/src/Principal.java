@@ -1,3 +1,4 @@
+import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 
@@ -26,6 +27,17 @@ public class Principal {
         System.out.println("Duração para maratonar Lost: " + lost.getDuracaoEmMinutos());
 
         lost.exibeFichaTecnica();
+
+        Filme outroFilme = new Filme();
+        outroFilme.setNome("Rambo 2 - A Missão");
+        outroFilme.setAnoDeLancamento(1985);
+        outroFilme.setDuracaoEmMinutos(94);
+
+        CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+        calculadora.inclui(meuFilme);
+        calculadora.inclui(outroFilme);
+        calculadora.inclui(lost);
+        System.out.println(calculadora.getTempoTotal());
 
     }
 }
