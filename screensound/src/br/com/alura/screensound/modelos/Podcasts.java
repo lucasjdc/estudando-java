@@ -1,4 +1,4 @@
-package br.com.alura.screensoud.modelos;
+package br.com.alura.screensound.modelos;
 
 public class Podcasts extends Audio {
     private String apresentador;
