@@ -2,6 +2,7 @@ import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
 import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
+import br.com.alura.screenmatch.modelos.Pessoa;
 import br.com.alura.screenmatch.modelos.Serie;
 
 import java.util.ArrayList;
@@ -9,7 +10,7 @@ import java.util.ArrayList;
 public class Principal {
     public static void main(String[] args) {
         Filme meuFilme = new Filme();
-        meuFilme.setNome("Rambo: Programado Para Matar");
+        meuFilme.setNome("Rambo: First Blood");
         meuFilme.setAnoDeLancamento(1982);
         meuFilme.setDuracaoEmMinutos(97);
 
@@ -32,7 +33,7 @@ public class Principal {
         lost.exibeFichaTecnica();
 
         Filme outroFilme = new Filme();
-        outroFilme.setNome("Rambo 2 - A Missão");
+        outroFilme.setNome("Rambo: Firs Blood Part II");
         outroFilme.setAnoDeLancamento(1985);
         outroFilme.setDuracaoEmMinutos(94);
 
@@ -65,6 +66,36 @@ public class Principal {
 
         System.out.println("Tamanho da lista: " + listaDeFilmes.size());
         System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getNome());
-        System.out.println(listaDeFilmes);
+        System.out.println("toString filme " + listaDeFilmes.get(0).toString());
+
+        // Desafio: hora da prática
+        // 2. No método main da classe Principal, crie um ArrayList de Pessoa
+        // chamado listaDePessoas
+        var listaDePessoas = new ArrayList<>();
+
+        // 3. Adicione pelo menos três pessoas à lista utilizando o método add.
+        var pessoa1 = new Pessoa();
+        pessoa1.setNome("José");
+        pessoa1.setIdade(40);
+        var pessoa2 = new Pessoa();
+        pessoa2.setNome("Paulo");
+        pessoa2.setIdade(41);
+        var pessoa3 = new Pessoa();
+        pessoa3.setNome("João");
+        pessoa3.setIdade(39);
+        listaDePessoas.add(pessoa1);
+        listaDePessoas.add(pessoa2);
+        listaDePessoas.add(pessoa3);
+
+        // 4. Imprima o tamanho da lista utilizando o método size.
+        System.out.println("Tamanho da lista: " + listaDePessoas.size());
+
+        // 5. Imprima a primeira pessoa da lista utilizando o método get.
+        //System.out.println("Primeira pessoa: " + listaDePessoas.get(0).toString());
+
+        // 6. Imprima a lista completa
+        for (int i = 0; i < listaDePessoas.size(); i++) {
+            System.out.println("- " + listaDePessoas.get(i).toString());
+        }
     }
 }
