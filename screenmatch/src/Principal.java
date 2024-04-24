@@ -3,12 +3,11 @@ import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
 import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
-
 import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        var meuFilme = new Filme("Rambo: First Blood", 1982, "Ted Kofcheff");
+        var meuFilme = new Filme("Rambo: First Blood", 1982);
         meuFilme.setDuracaoEmMinutos(97);
 
         meuFilme.exibeFichaTecnica();
@@ -19,9 +18,7 @@ public class Principal {
         System.out.println("Total de avaliações: " + meuFilme.getTotalDeAvaliacoes());
         System.out.println("Média das avaliações: " + meuFilme.pegaMedia());
 
-        Serie lost = new Serie();
-        lost.setNome("Lost");
-        lost.setAnoDeLancamento(2004);
+        Serie lost = new Serie("Lost", 2004);
         lost.setTemporadas(6);
         lost.setEpisodiosPorTemporada(10);
         lost.setMinutosPorEspisodio(50);
@@ -29,7 +26,7 @@ public class Principal {
 
         lost.exibeFichaTecnica();
 
-        var outroFilme = new Filme("Rambo: Firs Blood Part II",1985, "George P. Cosmatos");
+        var outroFilme = new Filme("Rambo: Firs Blood Part II",1985);
         outroFilme.setDuracaoEmMinutos(94);
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
@@ -48,7 +45,7 @@ public class Principal {
 
         filtro.filtra(episodio);
 
-        var filmeDoPaulo = new Filme("Dogville", 2003, "Lars von Trier");
+        var filmeDoPaulo = new Filme("Dogville", 2003);
         filmeDoPaulo.setDuracaoEmMinutos(177);
         filmeDoPaulo.avalia(10);
 
@@ -61,6 +58,5 @@ public class Principal {
         System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getNome());
         System.out.println("toString filme " + listaDeFilmes.get(0).toString());
         System.out.println(listaDeFilmes.stream().toList());
-
     }
 }
