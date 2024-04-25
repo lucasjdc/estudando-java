@@ -1,10 +1,8 @@
 package br.com.alura.screenmatch.principal;
 
 import br.com.alura.screenmatch.modelos.*;
-
-import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Collections;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
@@ -16,6 +14,8 @@ public class PrincipalComListas {
         Filme captainBlood1935 = new Filme("Captain Blood", 1935);
         captainBlood1935.avalia(8);
         Serie starTrek1966 = new Serie("Star Trek", 1966);
+        var theFastAndTheFurious2001 = new Filme("The Fast and the Furious",2001);
+        theFastAndTheFurious2001.avalia(7);
 
         // Criando a lista e adicionando os títulos
         ArrayList<Titulo> lista = new ArrayList<>();
@@ -23,6 +23,7 @@ public class PrincipalComListas {
         lista.add(starWars1977);
         lista.add(captainBlood1935);
         lista.add(starTrek1966);
+        lista.add(theFastAndTheFurious2001);
 
         for (Titulo item: lista) {
             System.out.println(item.getNome());
@@ -31,46 +32,23 @@ public class PrincipalComListas {
             }
         }
 
-        // Testando a Classe Cachorro
-        // Criando um objeto da classe Cachorro
-        //Cachorro cachorro = new Cachorro();
+        // Ordenando a lista
+        ArrayList<String> buscaPorArtista = new ArrayList<>();
+        buscaPorArtista.add("Sylvester Stallone");
+        buscaPorArtista.add("Richard Crenna");
+        buscaPorArtista.add("Brian Dennehy");
+        buscaPorArtista.add("Chris Farley");
+        buscaPorArtista.add("Nicollette Sheridan");
+        buscaPorArtista.add("Robin Shou");
+        buscaPorArtista.add("Christopher Lambert");
+        buscaPorArtista.add("Jackie Chan");
+        System.out.println(buscaPorArtista);
 
-        // Fazendo o casting para a classe Animal
-        //Animal animal = (Animal) cachorro;
-        Animal animal = new Gato();
-
-        //animal.emitirSom();
-
-        // Verificando se o objeto é um instância de Cachorro antes de fazer o casting
-
-        if (animal instanceof Cachorro) {
-            Cachorro cachorro = (Cachorro) animal;
-
-            cachorro.emitirSom();
-            cachorro.abanarRabo();
-        } else {
-            System.out.println("O objeto não é um cachorro");
-        }
-
-        // Criando uma lista de produtos
-        List<Produto> produtos = new ArrayList<>();
-        produtos.add(new Produto("Caneta", 1.50));
-        produtos.add(new Produto("Caderno", 5.00));
-        produtos.add(new Produto("Borracha", 0.80));
-
-        // Calculando o preço médio dos produtos
-        double somaPrecos = 0;
-        for (Produto produto: produtos) {
-            somaPrecos += produto.getPreco();
-        }
-
-        double precoMedio = somaPrecos / produtos.size();
-
-        // Formatando o preço médio com duas casas decimais
-        DecimalFormat df = new DecimalFormat("0.00");
-        String precoMedioFormatado = df.format(precoMedio);
-
-        // Impriminto o preço médio dos produtos formatado
-        System.out.println("Preço médio dos produtos: R$ " + precoMedioFormatado);
+        Collections.sort(buscaPorArtista);
+        System.out.println("Depois da ordenação");
+        System.out.println(buscaPorArtista);
+        System.out.println("Lista de títulos ordenada");
+        Collections.sort(lista);
+        System.out.println(lista);
     }
 }
