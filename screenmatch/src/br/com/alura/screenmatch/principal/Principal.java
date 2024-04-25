@@ -1,9 +1,10 @@
+package br.com.alura.screenmatch.principal;
+
 import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
 import br.com.alura.screenmatch.modelos.*;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Principal {
     public static void main(String[] args) {
@@ -58,31 +59,5 @@ public class Principal {
         System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getNome());
         System.out.println("toString filme " + listaDeFilmes.get(0).toString());
         System.out.println(listaDeFilmes.stream().toList());
-
-        // 1. Crie uma classe Produto com atributos como nome, preço, e quantidade. Em
-        // seguida, crie uma lista de objetos Produto utilizando a classe ArrayList. Adicione
-        // alguns produtos, imprima o tamanho da lista e recupere um produto pelo índice.
-
-        ArrayList<Produto> listaProdutos = new ArrayList<>();
-        listaProdutos.add(new Produto("Caderno", 14,30));
-        listaProdutos.add(new Produto("Ventilador", 139.99, 10));
-        listaProdutos.add(new Produto("Caneta", 1.99, 150));
-
-        // Exibir o tamanho da lista
-        System.out.println("Quantidade de Produtos: " + listaProdutos.size());
-
-        // Visualizando o primeiro produto
-        System.out.println("Primeiro protudo da lista: " + listaProdutos.get(1).getNomeDoProduto());
-
-        // Visualizando os produtos cadastrados na lista.
-        System.out.println(listaProdutos.stream().toList());
-
-        // Crie um objeto ProdutoPerecivel
-
-        ArrayList<ProdutoPerecivel> listaDePereciveis = new ArrayList<>();
-        listaDePereciveis.add(new ProdutoPerecivel("Queijo", 48.43,20, new Date(2024,06,24)));
-
-        // imprima o produto perecivel cadastrado
-        System.out.println(listaDePereciveis.stream().toList());
     }
 }
