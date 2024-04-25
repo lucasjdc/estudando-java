@@ -1,9 +1,7 @@
 package br.com.alura.screenmatch.principal;
 
 import br.com.alura.screenmatch.modelos.*;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.*;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
@@ -16,10 +14,10 @@ public class PrincipalComListas {
         captainBlood1935.avalia(8);
         Serie starTrek1966 = new Serie("Star Trek", 1966);
         var theFastAndTheFurious2001 = new Filme("The Fast and the Furious",2001);
-        theFastAndTheFurious2001.avalia(7);
+        theFastAndTheFurious2001.avalia(9);
 
         // Criando a lista e adicionando os títulos
-        ArrayList<Titulo> lista = new ArrayList<>();
+        List<Titulo> lista = new LinkedList<>();
         lista.add(theTerminator1984);
         lista.add(starWars1977);
         lista.add(captainBlood1935);
@@ -34,7 +32,7 @@ public class PrincipalComListas {
         }
 
         // Ordenando a lista
-        ArrayList<String> buscaPorArtista = new ArrayList<>();
+        List<String> buscaPorArtista = new LinkedList<>();
         buscaPorArtista.add("Sylvester Stallone");
         buscaPorArtista.add("Christopher Lambert");
         buscaPorArtista.add("Jackie Chan");
