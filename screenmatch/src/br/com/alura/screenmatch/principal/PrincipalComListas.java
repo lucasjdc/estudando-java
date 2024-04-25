@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
+        // Criando instâncias de filmes e séries
         Filme theTerminator1984 = new Filme("The Terminator", 1984);
         theTerminator1984.avalia(8);
         Filme starWars1977 = new Filme("Star Wars", 1977);
@@ -16,6 +17,7 @@ public class PrincipalComListas {
         captainBlood1935.avalia(8);
         Serie starTrek1966 = new Serie("Star Trek", 1966);
 
+        // Criando a lista e adicionando os títulos
         ArrayList<Titulo> lista = new ArrayList<>();
         lista.add(theTerminator1984);
         lista.add(starWars1977);
@@ -24,8 +26,9 @@ public class PrincipalComListas {
 
         for (Titulo item: lista) {
             System.out.println(item.getNome());
-            Filme filme = (Filme) item;
-            System.out.println("Classificação: " + filme.getClassificacao());
+            if (item instanceof Filme filme && filme.getClassificacao() > 2) {
+                System.out.println("Classificação: " + filme.getClassificacao());
+            }
         }
     }
 }
