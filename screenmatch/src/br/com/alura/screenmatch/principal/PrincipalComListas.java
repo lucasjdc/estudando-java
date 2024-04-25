@@ -1,10 +1,10 @@
 package br.com.alura.screenmatch.principal;
 
-import br.com.alura.screenmatch.modelos.Filme;
-import br.com.alura.screenmatch.modelos.Serie;
-import br.com.alura.screenmatch.modelos.Titulo;
+import br.com.alura.screenmatch.modelos.*;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.List;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
@@ -30,5 +30,47 @@ public class PrincipalComListas {
                 System.out.println("Classificação: " + filme.getClassificacao());
             }
         }
+
+        // Testando a Classe Cachorro
+        // Criando um objeto da classe Cachorro
+        //Cachorro cachorro = new Cachorro();
+
+        // Fazendo o casting para a classe Animal
+        //Animal animal = (Animal) cachorro;
+        Animal animal = new Gato();
+
+        //animal.emitirSom();
+
+        // Verificando se o objeto é um instância de Cachorro antes de fazer o casting
+
+        if (animal instanceof Cachorro) {
+            Cachorro cachorro = (Cachorro) animal;
+
+            cachorro.emitirSom();
+            cachorro.abanarRabo();
+        } else {
+            System.out.println("O objeto não é um cachorro");
+        }
+
+        // Criando uma lista de produtos
+        List<Produto> produtos = new ArrayList<>();
+        produtos.add(new Produto("Caneta", 1.50));
+        produtos.add(new Produto("Caderno", 5.00));
+        produtos.add(new Produto("Borracha", 0.80));
+
+        // Calculando o preço médio dos produtos
+        double somaPrecos = 0;
+        for (Produto produto: produtos) {
+            somaPrecos += produto.getPreco();
+        }
+
+        double precoMedio = somaPrecos / produtos.size();
+
+        // Formatando o preço médio com duas casas decimais
+        DecimalFormat df = new DecimalFormat("0.00");
+        String precoMedioFormatado = df.format(precoMedio);
+
+        // Impriminto o preço médio dos produtos formatado
+        System.out.println("Preço médio dos produtos: R$ " + precoMedioFormatado);
     }
 }
