@@ -6,6 +6,16 @@ public class Aluno {
     private int idade;
     private String curso;
 
+    public Aluno(String nome, int idade, String curso) {
+        this.nome = nome;
+        this.idade = idade;
+        this.curso = curso;
+    }
+    
+    public static Aluno criarAluno(String nome, int idade, String curso) {        
+        return new Aluno(nome, idade, curso);
+    }
+
     public Integer getId() {
         return id;
     }
