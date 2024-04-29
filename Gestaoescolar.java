@@ -12,40 +12,23 @@ public class Gestaoescolar {
     public static void main(String[] args) {
         List<Aluno> listaDeAlunos = new ArrayList<>();
         System.out.println("Sistema de gestão escolar");
-        System.out.println("1. Cadastrar aluno");
-        //Scanner scanner = new Scanner(System.in);
+        System.out.println("Cadastro de aluno");
         
-        //System.out.println("Digite o nome do aluno:");
-        //String nome = scanner.nextLine();
-        String nome = obterEntrada("Digite o nome do aluno:");
-        
-        //System.out.println("Digite a idade do aluno:");
-        //int idade = scanner.nextInt(); // O metodo nextInt() le apenas valores inteiros deixando um "\n"
-        int idade = Integer.parseInt(obterEntrada("Digite a idade do aluno:"));
-                
-        // Limpeza do buffer
-        //scanner.nextLine(); // Essa linha recolhe esse "\n".
-        
-        //System.out.println("Digite o curso do aluno: ");
-        //String curso = scanner.nextLine();
+        String nome = obterEntrada("Digite o nome do aluno:");       
+        int idade = Integer.parseInt(obterEntrada("Digite a idade do aluno:"));               
+       
         String curso = obterEntrada("Digite o curso do aluno: ");
         
         // Exibir informações do aluno
         System.out.println("Verifique se os dados do aluno estão corretos.");
         System.out.println("Aluno: " + nome);
         System.out.println("Idade: " + idade);
-        System.out.println("Curso: " + curso);
-        
-        //scanner.close();
-                
-        //Aluno aluno = Aluno.criarAluno(nome, idade, curso);
-        //listaDeAlunos.add(aluno);
+        System.out.println("Curso: " + curso);       
         
         cadastrarAluno(nome, idade, curso);
 
         System.out.println("Aluno cadastrado com sucesso!");
-        
-        
+               
         }
         
     private static String obterEntrada(String prompt) {
