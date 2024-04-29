@@ -1,9 +1,27 @@
 package com.costa.gestaoescolar;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Column;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "aluno")
 public class Aluno {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private int id;
+    
+    @Column
     private String nome;
+    
+    @Column
     private int idade;
+    
+    @Column
     private String curso;
 
     public Aluno(String nome, int idade, String curso) {
@@ -16,11 +34,11 @@ public class Aluno {
         return new Aluno(nome, idade, curso);
     }
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
